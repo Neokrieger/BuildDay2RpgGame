@@ -1,0 +1,20 @@
+
+<body style="text-align: center;">
+<p> Welcome to the game <%= locals.currentPlayer.name %> </p>
+
+<p><% for(let i = 0; i < 8; i++){ %> <p>  <% for(let j = 0; j < 8; j++){ %> <%= map[i][j] %> <% } %>  </p> <% } %><p>
+
+
+<form action="/game/<%= locals.currentPlayer.name %>/move/Up" method="post"><button>Up</button></form>
+
+<body style="float:center;"><form action="/game/<%= locals.currentPlayer.name %>/move/Left" method="post"><button>Left</button></form>
+
+<form action="/game/<%= locals.currentPlayer.name %>/move/Right" method="post"><button>Right</button></form></body>
+
+<form action="/game/<%= locals.currentPlayer.name %>/move/Down" method="post"><button>Down</button></form>
+
+<div>Stats- Level:<%=locals.currentPlayer.lvl%> Experience:<%=locals.currentPlayer.xp%> Attack:<%=locals.currentPlayer.atk%> Health:<%=locals.currentPlayer.hp%> Gold:<%=locals.currentPlayer.gold%></div>
+<br>
+<form action="/game/<%= locals.currentPlayer.name %>/save?_method=PUT" method="post"><button>Save Game</button></form>
+<form action="/game/<%= locals.currentPlayer.name %>/quit" method="post"><button>Quit</button></form>
+</body>

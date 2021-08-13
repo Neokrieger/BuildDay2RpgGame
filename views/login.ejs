@@ -1,0 +1,15 @@
+<body style="text-align: center;">
+  <h1>A Very Bland RPG</h1>
+  <br>
+<form action="/login/error" method="post">
+      <input type="text" name="username" placeholder="username" />
+      <input type="password" name="password" placeholder="password" />
+      <br>
+      <br>
+      <button type="submit">Login</button>
+</form>
+<form action="/register" method="get">
+      <button type="submit">Register</button>
+</form>
+<p> <%= error %> </p>
+<body>

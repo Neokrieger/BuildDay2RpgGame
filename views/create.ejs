@@ -1,0 +1,8 @@
+<body style="text-align: center;">
+<h1>Hello <%= currentUser.username %>, please enter a name for your new character</h1>
+<form action="/create/<%=id%>" method="post">
+  <input type="text" placeholder="name" name="name"/>
+  <button type="submit">Create New</button>
+</form>
+<p> <%= text %> </p>
+</body>

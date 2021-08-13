@@ -1,0 +1,19 @@
+<body style="text-align: center;">
+  <h1>A Very Bland RPG</h1>
+<div>Hello <%= currentUser.username%>, create new character or select to play </div>
+<form action="/create/<%=id%>" method="get">
+  <button type="submit">Create New</button>
+</form>
+<br>
+
+<% chars.map(char => { %>
+              <form action="/game/<%=char.name%>" method="post">
+                <button><%= char.name %></button>
+              </form>
+                <% }) %>
+
+<br>
+<form action="/user" method="post">
+  <button type="submit">Log out</button>
+</form>
+</body>
